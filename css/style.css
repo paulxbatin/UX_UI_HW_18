@@ -18,7 +18,7 @@ body {
 h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 6em;
+    font-size: 6rem;
     text-align: center;
     text-transform: uppercase;
     color: black;
@@ -26,30 +26,31 @@ h1 {
 h2 {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 4.5em;
+    font-size: 4.5rem;
 }
 h3 {
-    font-size: 4em;
+    font-size: 4rem;
     font-weight: normal;
     margin: 0;
-    line-height: 1em;
+    line-height: 4rem;
 }
 h4 {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 3em;
+    font-size: 3rem;
 }
 h5 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     text-align: center;
     
 }
 button {
     text-transform: uppercase;
+    font-size: 1.1rem;
     background: none;
-    padding: 1.5% 3%;
-    margin: 0 1em;
-    min-width: 15em;
+    padding: 25px;
+    margin: 0 10px;
+    min-width: 200px;
     color: var(--background-color);
     border: solid 3px var(--background-color);
     border-radius: 50px;
@@ -152,28 +153,36 @@ ul {
 
 
 /* Portfolio work styling */
+.special {
+    flex-direction: row-reverse;
+}
+.work {
+    display: flex;
+    flex-direction: column;
+}
 .case-container {
     display: flex;
     margin: 0 5% 5%;
     justify-content: space-between;
     height: 50vh;
 }
-.case-info button {
+.work button {
     color: var(--primary-color);
     border-color: var(--primary-color);
     margin: 0;
-    padding: 2.5% 0;
 }
 .case-images {
     display: flex;
     justify-content: space-evenly;
     width: 49%;
+    height: auto;
     background-color: #30332e;
     overflow: hidden;
     border-radius: 5px;
 }
 .case-images img {
-    object-fit: contain;
+    object-fit: cover;
+    padding: 1%;
 }
 .case-img1 {
     transform: translate(0px, 50px);
@@ -187,28 +196,40 @@ ul {
 .case-img4 {
     transform: translate(0px, 50px);
 }
+.case-img5 {
+    min-width: 100%;
+}
 .case-info {
     width: 49%;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
 }
 
 
 /* About and Skills styling */
+.mySkills {
+    margin-bottom: 3%;
+}
 .aboutContainer {
     display: flex;
-    justify-content: space-evenly;
-    padding: 0 3%;
+    justify-content: space-between;
+    margin: 0 2%;
 }
 .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 33%;
-    padding: 2%;
-    border: solid 1px black;
+    padding: 3%;
+    margin: 0 1%;
+    overflow: hidden;
 }
 .skill i {
     margin-top: 10%;
 }
+
 
 /* Footer Styling */
 footer {
@@ -250,7 +271,7 @@ footer img {
 .div2 { grid-area: 1 / 2 / 2 / 3; }
 .div3 { 
     grid-area: 2 / 1 / 3 / 3;
-    font-size: 3em;
+    font-size: 3rem;
     color: var(--tertiary-color);
 }
 .div4 { grid-area: 3 / 1 / 4 / 2; }
@@ -259,5 +280,112 @@ footer img {
 .div4, .div5 {
     text-transform: uppercase;
     align-self: end;
-    font-size: 0.8em;
+    font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px){
+    button {
+        font-size: 1rem;
+        padding: 20px;
+        margin: 0 5px;
+        min-width: 150px;
+    }
+    .case-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .case-images {
+        width: 90%;
+        height: 50%;
+    }
+    .case-images img {
+        max-height: 500px;
+    }
+    .case-info {
+        width: 90%;
+        height: 50%;
+    }
+    .mySkills {
+        margin: 0;
+    }
+    .aboutContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill {
+        width: 90%;
+        margin-bottom: 3%;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        margin-top: 3%;
+    }
+    h4 {
+        font-size: 2rem;
+    }
+    h5 {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    button {
+        font-size: 1rem;
+        padding: 15px;
+        margin: 0 5px;
+        min-width: 100px;
+    }
+     .case-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .case-images {
+        width: 90%;
+        height: 50%;
+    }
+    .case-images img {
+        max-height: 500px;
+    }
+    .case-info {
+        width: 90%;
+        height: 50%;
+    }
+    .mySkills {
+        margin: 0;
+    }
+    .aboutContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill {
+        width: 90%;
+        margin-bottom: 3%;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        margin-top: 2%;
+    }
+    h4 {
+        font-size: 2rem;
+    }
+    h5 {
+        font-size: 1.8rem;
+    }
 }
